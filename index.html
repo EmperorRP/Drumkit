@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Drumkit Project - 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/drums.jpg" alt="Drums" />
+      <div class="bass">D - Bass</div>
+      <div class="ride">H - Ride Cymbal</div>
+      <div class="snare">J - Snare</div>
+      <div class="hihat">S - hi hat</div>
+      <div class="tom">K - Tom</div>
+    </div>
+    <div class="keys">
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">hi-hat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>H</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>J</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>K</kbd>
+        <span class="sound">tom</span>
+      </div>
+    </div>
+
+    <audio data-key="83" src="sounds/hihat.webm"></audio>
+    <audio data-key="68" src="sounds/kick.webm"></audio>
+    <audio data-key="72" src="sounds/ride.webm"></audio>
+    <audio data-key="74" src="sounds/snare.webm"></audio>
+    <audio data-key="75" src="sounds/tom.webm"></audio>
+
+    <script>
+      window.addEventListener("keydown", function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        console.log(audio);
+        if (!audio) return;
+        audio.currentTime = 0; //rewind to beginning
+        audio.play();
+      });
+    </script>
+  </body>
+</html>

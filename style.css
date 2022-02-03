@@ -1,0 +1,58 @@
+body {
+  background-color: black;
+}
+
+img {
+  width: 40%;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+html {
+  color: #f3f3f3;
+  font-family: cursive;
+  font-size: 25px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bass {
+  position: absolute;
+  bottom: -10px;
+  left: 500px;
+}
+
+.ride {
+  position: absolute;
+  top: 80px;
+  left: 190px;
+}
+
+.snare {
+  position: absolute;
+  top: 160px;
+  right: 150px;
+}
+
+.hihat {
+  position: absolute;
+  bottom: 250px;
+  right: 90px;
+}
+
+.tom {
+  position: absolute;
+  top: 50%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+}
+
+.snare {
+  position: absolute;
+  top: 160px;
+  right: 150px;
+}
